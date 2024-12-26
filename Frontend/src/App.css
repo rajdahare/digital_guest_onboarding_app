@@ -1,0 +1,105 @@
+/* Default padding for larger screens */
+
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+.container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  /* Medium screens (md) and up */
+  @media (min-width: 768px) {
+    .container {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+  
+  /* Small screens (sm) and up */
+  @media (max-width: 640px) {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  
+  .guest-hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers content vertically */
+    flex-direction: column; /* Corrected syntax */
+  
+    height: 100vh; /* Increased height for better visual impact */
+    background-image: url('https://cdn.sanity.io/images/ocl5w36p/prod2/d0804c623c7fa3863fb7c330e484bc533a8363d6-3840x1320.jpg?w=1600&fm=webp&dpr=2');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: white; /* Text color for contrast */
+    text-align: center; /* Centers text inside the container */
+    padding: 1rem; /* Adds spacing for inner content */
+  }
+  
+  
+  
+  
+
+  .custom-button {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Moving gradient border */
+  .custom-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: linear-gradient(90deg, blue, pink, purple, blue);
+    background-size: 300% 100%;
+    z-index: -1;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: exclude;
+    transition: all 0.4s ease;
+  }
+  
+  /* Hover effect: Apply animation, color change, and size increase */
+  .custom-button {
+    transform: scale(1.1); /* Increase the button size on hover */
+    background-color: rgba(0, 0, 0, 0.1); /* Change the background color on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  }
+  
+  /* Gradient animation */
+  .custom-button:hover::before {
+    animation: gradient-move 3s infinite;
+  }
+  
+  /* Keyframe animation for moving gradient */
+  @keyframes gradient-move {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
