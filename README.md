@@ -52,7 +52,7 @@ This project is a **Digital Guest Onboarding System** where admins can manage ho
 
 1. **Clone the repository**:
    ```bash
-   https://github.com/anisahu99/Digital_Onboarding_System.git
+   https://github.com/rajdahare/digital_guest_onboarding_app.git
    ```
 
 2. **Navigate to the project directory**:
