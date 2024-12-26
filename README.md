@@ -79,14 +79,7 @@ This project is a **Digital Guest Onboarding System** where admins can manage ho
    http://localhost:3000
    ```
 
-## Admin Login Credentials
 
-- **Main Admin**:
-  - **Username**: admingupta@1234
-  - **Password**: 12345678
-- **Guest Admin**:
-  - **Username**: guestgupta@gmail.com
-  - **Password**: 12345678
 
 ## Conclusion
 
